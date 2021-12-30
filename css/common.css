@@ -244,14 +244,10 @@ section{
     overflow: hidden;
 }
 
-#section1 .aboutInfo dd li{
+#section1 .aboutInfo dd li span{
     font-weight: 100;
     line-height: 24px;
     color: #ddd;
-}
-
-#section1 .aboutInfo dd li.mobile{
-    display: none;
 }
 
 .zt-skill-bar {
@@ -365,7 +361,79 @@ section{
     z-index: 20;
 }
 
-.swiperTit{
+.mainRolling .swiper01 .card{
+    float: left;
+    width: 48%;
+    padding: 10px;
+    box-sizing: border-box;
+    background: #efefef;
+}
+
+.mainRolling .swiper01 .card:nth-child(even){
+    margin-left: 4%;
+}
+
+.mainRolling .swiper01 .card:nth-child(n+3){
+    margin-top: 4%;
+}
+
+.mainRolling .swiper01 .card .img{
+    height: 200px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50%;
+    background-color: #fff;
+}
+
+.mainRolling .swiper01 .card dl{
+    height: 70px;
+    padding-top: 20px;
+    box-sizing: border-box;
+}
+
+.mainRolling .swiper01 .card dt{
+    font-size: 18px;
+    font-weight: 800;
+    color: #000;
+}
+
+.mainRolling .swiper01 .card dd{
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 300;
+    color: #000;
+}
+
+.mainRolling .swiper01 .card .img.suprema{
+    background-image: url(../img/suprema.png);
+}
+
+.mainRolling .swiper01 .card .img.kumsung{
+    background-image: url(../img/kumsung.jpg);
+}
+
+.mainRolling .swiper01 .card .img.skt{
+    background-size: 50%;
+    background-image: url(../img/skt.jpg);
+}
+
+.mainRolling .swiper01 .card .img.envision{
+    background-image: url(../img/envision.png);
+}
+
+.mainRolling .swiper01 .card .img.starfield{
+    background-image: url(../img/starfield.jpg);
+}
+
+.mainRolling .swiper01 .card .img.shinhan{
+    background-image: url(../img/shinhan.png);
+}
+
+.mainRolling .swiper01 .card .img.hold{
+    background-image: url(../img/hold.gif);
+}
+
+ .swiper02 .swiperTit{
     width: 30%;
     height: 100%;
     float: left;
@@ -373,18 +441,18 @@ section{
     position: relative;
 }
 
-.swiperTit .btnBox{
+ .swiper02 .swiperTit .btnBox{
     margin-top: 30px;
     font-size: 0;
 }
 
-.swiperTit .btnBox a:first-child{
+ .swiper02 .swiperTit .btnBox a:first-child{
     margin-right: 4%;
     background: #ff8400;
     color: #fff;
 }
 
-.swiperTit .btnBox a{
+ .swiper02 .swiperTit .btnBox a{
     display: inline-block;
     font-size: 14px;
     width: 48%;
@@ -398,17 +466,17 @@ section{
     box-sizing: border-box;
 }
 
-.swiperTit dt{
+ .swiper02 .swiperTit dt{
     font-size: 36px;
 }
 
-.swiperTit dd:nth-child(2){
+ .swiper02 .swiperTit dd:nth-child(2){
     margin-top: 10px;
     font-size: 20px;
     font-weight: 100;
 }
 
-.swiperTit dd:last-child{
+ .swiper02 .swiperTit dd:last-child{
     margin-top: 20px;
     font-size: 14px;
     font-weight: 100;
@@ -416,27 +484,27 @@ section{
     line-height: 20px;
 }
 
-.swiperTxt{
+ .swiper02 .swiperTxt{
     width: calc(70% - 100px);
     float: left;
 }
 
-.swiperTxt dl{
+ .swiper02 .swiperTxt dl{
     margin-bottom: 20px;
 }
 
-.swiperTxt dl dd{
+ .swiper02 .swiperTxt dl dd{
     margin-top: 10px;  
     line-height: 20px;
     font-weight: 100;
     color: #ddd;
 }
 
-.mainRolling .swiper-slide.animate .swiperText {
+.mainRolling .swiper-slide.animate .swiper02 .swiperText {
     height: 100%;
 }
 
-.mainRolling .swiper-slide.animate .swiperText dd a {
+.mainRolling .swiper-slide.animate .swiper02 .swiperText dd a {
     opacity: 1;
     transition-delay: .5s;
     transition-duration: .5s;
@@ -444,6 +512,36 @@ section{
 
 #section2{
     position: relative;
+}
+
+.swiperTab{
+    position: absolute;
+    display: inline-block;
+    font-size: 0;
+    border: 1px solid #666;
+    top: 100px;
+    left: 150px;
+    z-index: 10;
+}
+
+.swiperTab li{
+    display: inline-block;
+}
+
+.swiperTab li + li{
+    border-left: 1px solid #666;
+}
+
+.swiperTab li a{
+    display: inline-block;
+    font-size: 14px;
+    padding: 7px 14px;
+}
+
+.swiperTab li.on a{
+    background: #fff;
+    color: #000;
+    font-weight: 600;
 }
 
 .slideGuide{
@@ -590,22 +688,36 @@ section{
     }
 
     .mainRolling .projectInfo{
-        padding: 50px;
-    }
-
-    .mainRolling .projectInfo{
         position: sticky;
+        padding: 200px 50px 50px 50px;
         transform: translateY(0);
         top: 0;
     }
 
-    .swiperTit{
+    .swiperTab{
+        left: 50px;
+    }
+
+    .mainRolling .swiper01 .card{
+        width: 100%;
+        float: none;
+    }
+
+    .mainRolling .swiper01 .card:nth-child(2){
+        margin-top: 6%;
+    }
+
+    .mainRolling .swiper01 .card:nth-child(even){
+        margin-left: 0;
+    }
+
+     .swiper02 .swiperTit{
         margin-right: 0;
         float: none;
         width: 100%;
     }
 
-    .swiperTxt{
+     .swiper02 .swiperTxt{
         width: 100%;
         float: none;
         margin-top: 50px;
@@ -657,11 +769,7 @@ section{
         margin-bottom: 10px;
     }
 
-    #section1 .aboutInfo dl:not(:first-child) dd li{
-        display: none;
-    }
-
-    #section1 .aboutInfo dl:not(:first-child) dd li.mobile{
+    #section1 .aboutInfo dl:not(:first-child) dd li span{
         display: block;
     }
 
@@ -695,8 +803,13 @@ section{
         display: none;
     }    
 
+    .swiperTab{
+        left: 30px;
+        top: 50px;
+    }
+
     .mainRolling .projectInfo{
-        padding: 30px 30px 100px 30px;
+        padding: 130px 30px 100px 30px;
     }
 
     #section3 .contact{
